@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from R4C.robots.views import CreateRobotAPIView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('create_robot/', CreateRobotAPIView.as_view(), name='create_robot'),
+
 ]
