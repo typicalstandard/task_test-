@@ -22,3 +22,6 @@ class CreateRobotAPIView(View):
 
     def get(self, request, *args, **kwargs):
         return JsonResponse({'error': 'Invalid HTTP method'}, status=405)
+from django.shortcuts import render
+
+# Create your views here.
