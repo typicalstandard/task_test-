@@ -1,9 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-
-from R4C.robots.views import ExportRobotsView
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('export_robots/', ExportRobotsView.as_view(), name='export_robots'),  # Новый маршрут
+    path('robots/', include('robots.urls', namespace='robots')),
 ]
