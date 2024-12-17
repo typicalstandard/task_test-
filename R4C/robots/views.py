@@ -20,5 +20,4 @@ class CreateRobotAPIView(View):
         except json.JSONDecodeError:
             return JsonResponse({'error': 'Invalid JSON data'}, status=400)
 
-    def get(self, request, *args, **kwargs):
-        return JsonResponse({'error': 'Invalid HTTP method'}, status=405)
+  
