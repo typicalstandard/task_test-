@@ -14,12 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 
-from R4C.robots.views import CreateRobotAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('create_robot/', CreateRobotAPIView.as_view(), name='create_robot'),
-
+    path('robots/', include('robots.urls', namespace='robots'))
 ]
