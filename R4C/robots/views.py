@@ -14,10 +14,8 @@ class CreateRobotAPIView(View):
             form = RobotForm(data)
             if form.is_valid():
                 form.save()
-                return JsonResponse({'message': 'Robot created successfully!'}, status=201)
+                return JsonResponse({'message': 'Робот успешно создан!'}, status=201)
             else:
                 return JsonResponse({'errors': form.errors}, status=400)
         except json.JSONDecodeError:
-            return JsonResponse({'error': 'Invalid JSON data'}, status=400)
-
-  
+            return JsonResponse({'error': 'Некорректные данные JSON'}, status=400)
