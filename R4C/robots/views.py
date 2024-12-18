@@ -11,4 +11,4 @@ class ExportRobotsView(View):
             response['Content-Disposition'] = 'attachment; filename="all_robots.xlsx"'
             return response
         except Exception as e:
-            return HttpResponseServerError("An error occurred while generating the Excel file.")
+            return HttpResponseServerError("Произошла ошибка при генерации файла Excel")
