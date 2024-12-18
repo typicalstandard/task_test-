@@ -1,7 +1,7 @@
 from django.http import JsonResponse, HttpResponse
 from django.views import View
 from customers.models import Customer
-from .services.robot_service import check_robot_availability, create_order
+from .services.order_service import check_robot_availability, create_order
 
 class NotifyCustomerView(View):
     def get(self, request, model_name, version, customer_id):
