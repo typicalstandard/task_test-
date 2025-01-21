@@ -1,3 +1,4 @@
+app_name = 'robots'
 from django.urls import path
 
 from .views import CreateRobotAPIView
