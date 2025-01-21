@@ -2,7 +2,6 @@ from django.urls import path
 
 from .views import CreateRobotAPIView
 
-app_name = 'robots'
 from .views import ExportRobotsView
 
 app_name = 'robots'
